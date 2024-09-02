@@ -11,6 +11,7 @@ string mannen;
 // }
 
 Console.WriteLine("Framför dig är det 2 dörrar. Höger eller Vänster?");
+Console.WriteLine("Svara med: vänster eller höger");
 direction = Console.ReadLine();
 
 if (direction.Equals("vänster", StringComparison.OrdinalIgnoreCase)) {
@@ -22,6 +23,7 @@ if (direction.Equals("vänster", StringComparison.OrdinalIgnoreCase)) {
 else if (direction.Equals("höger", StringComparison.OrdinalIgnoreCase)) {
     Console.Clear();
     Console.WriteLine("Du öppnar den högra dörren. När du går igenom dörren och kollar backom dig så ser du inte dörren längre, isället ser du en man som är 50 meter bakom dig som går mot dig. Du har en känsla att han kommer ge dig något. Springer du eller Stannar du");
+    Console.WriteLine("Svara med: spring eller stanna");
     mannen = Console.ReadLine();
 
     if (mannen.Equals("spring", StringComparison.OrdinalIgnoreCase)) {
@@ -32,7 +34,7 @@ else if (direction.Equals("höger", StringComparison.OrdinalIgnoreCase)) {
 
     else if (mannen.Equals("stanna", StringComparison.OrdinalIgnoreCase)) {
         Console.Clear();
-        Console.WriteLine("Din nyfikenhet tar över och du stannar och väntar på mannen. När han är framför dig skappar han");
+        Console.WriteLine("Din nyfikenhet tar över och du stannar och väntar på mannen. När han är framför dig skappar han en annan dörr för dig att gå in i och säger: 'Du är långt ifrån ditt hem, du borde inte vara här. Gå in i dörren och den kommer att ta dig hem'. ");
         Console.ReadLine();
     }
 
