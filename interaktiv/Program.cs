@@ -2,8 +2,11 @@
 string mannen; 
 
 // Console.WriteLine("Användarnamn: ");
-// string name = Console.ReadLine();
-// f (name = "matthias") {
+// string name = Console.ReadLine.ToLower();
+// name = name.ToLower();
+// name = name.ToHigher
+// || kan användas som eller i en ()
+// if (name == "matthias" || name == "markus") {
 //    Console.WriteLine("Välkommen");
 // }
 // else {
@@ -14,40 +17,193 @@ Console.WriteLine("Framför dig är det 2 dörrar. Höger eller Vänster?");
 Console.WriteLine("Svara med: vänster eller höger");
 direction = Console.ReadLine();
 
-if (direction.Equals("vänster", StringComparison.OrdinalIgnoreCase)) {
+// (direction.Equals("vänster", StringComparison.OrdinalIgnoreCase))
+// .Equals kollar att direction = vänster.
+// StringComparison.OrdinalIgnoreCase gör att den inte är case sensetive så det går att stava som "vÄNstEr"
+
+if (direction.ToLower() == "vänster") {
     Console.Clear();
-    Console.WriteLine("Du öppnar den vänsta dörren och en bomb är framför dig och exploderar. Du dör. Game over! 1/5");
+    Console.WriteLine("Du öppnar den vänsta dörren och en bomb är framför dig och exploderar. Du dör. Game over! 1/5 Ending");
+    Console.WriteLine("""
+             . . .                         
+              \|/                          
+            `--+--'                        
+              /|\                          
+             ' | '                         
+               |                           
+               |                           
+           ,--'#`--.                       
+           |#######|                       
+        _.-'#######`-._                    
+     ,-'###############`-.                 
+   ,'#####################`,               
+  /#########################\              
+ |###########################|             
+|#############################|            
+|#############################|            
+|#############################|            
+|#############################|            
+ |###########################|             
+  \#########################/              
+   `.#####################,'               
+     `._###############_,'                 
+        `--..#####..--'
+""");
     Console.ReadLine();
 }
 
-else if (direction.Equals("höger", StringComparison.OrdinalIgnoreCase)) {
+else if (direction.ToLower() == "höger") {
     Console.Clear();
-    Console.WriteLine("Du öppnar den högra dörren. När du går igenom dörren och kollar backom dig så ser du inte dörren längre, isället ser du en man som är 50 meter bakom dig som går mot dig. Du har en känsla att han kommer ge dig något. Springer du eller Stannar du");
+    Console.WriteLine(" När du går igenom dörren och kollar backom dig så ser du inte dörren längre, isället ser du en man som är 50 meter bakom dig som går mot dig. Du har en känsla att han kommer ge dig något. Springer du eller Stannar du");
     Console.WriteLine("Svara med: spring eller stanna");
+    Console.WriteLine("""
+                        ░░▓▓▓▓▓▓▓▓▓▓▓▓                                    
+                  ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓██████                              
+                ██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██                            
+              ██▓▓▓▓▓▓▓▓██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                        
+            ▓▓▓▓▓▓▓▓▓▓██████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██                      
+          ▓▓▓▓▓▓▓▓▓▓▓▓██████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                    
+        ▒▒▓▓▓▓▓▓▓▓▓▓██████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                  
+        ██▓▓▓▓▓▓▓▓▓▓████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██                  
+      ██▓▓▓▓▓▓▓▓▓▓████████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██                
+      ██▓▓▓▓▓▓▓▓██████████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██              
+    ██▓▓▓▓▓▓▓▓▓▓████████████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██            
+    ██▓▓▓▓▓▓▓▓████████████████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██            
+  ▓▓▓▓▓▓▓▓▓▓▓▓██████████████████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓          
+  ██▓▓▓▓▓▓▓▓████████████████████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██          
+  ██▓▓▓▓▓▓▓▓██████████████████████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██          
+  ██▓▓▓▓▓▓██████████████████████████████████▓▓▓▓▓▓▓▓▓▓▓▓██            
+  ██▓▓▓▓▓▓████████████████████████████████████▓▓▓▓▓▓▓▓▓▓██            
+  ██▓▓▓▓▓▓████████████████████████████████████▓▓▓▓▓▓▓▓▓▓██            
+  ██▓▓▓▓▓▓████████████████████████████████████▓▓▓▓▓▓▓▓▓▓██            
+    ██▓▓▓▓▓▓████████████████████████████████▓▓▓▓▓▓▓▓▓▓██              
+    ██▓▓▓▓▓▓████████████████████████████████▓▓▓▓▓▓▓▓▓▓██              
+    ██▓▓▓▓▓▓██████████████████████████████▓▓▓▓▓▓▓▓▓▓██                
+      ██▓▓▓▓▓▓▓▓████████████████████████▓▓▓▓▓▓▓▓████                  
+        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓████████▓▓▓▓▓▓▓▓▓▓▓▓██                      
+          ▓▓▓▓▓▓▓▓▓▓      ▓▓      ████████████                        
+          ░░░░░░░░░░              ░░░░░░░░░░                          
+                                                                      
+                                  ████████                            
+            ▓▓▓▓▓▓▓▓        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                      
+            ██▓▓▓▓▓▓▒▒▓▓▓▓▓▓██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                  
+            ██▓▓▓▓▓▓▓▓████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██                  
+              ██▓▓▓▓▓▓██████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██                  
+              ██▓▓▓▓▓▓██████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██                  
+              ██▓▓▓▓▓▓████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓██                    
+              ██▓▓▓▓▓▓████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓██                    
+              ██▓▓▓▓████████████████▓▓▓▓▓▓▓▓▓▓▓▓██                    
+              ██▓▓▓▓████████████████▓▓▓▓▓▓▓▓▓▓▓▓██                    
+              ██▓▓▓▓████████████████▓▓▓▓▓▓▓▓▓▓▓▓██                    
+              ██▓▓▓▓████████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                  
+              ██▓▓▓▓██████████████████▓▓▓▓▓▓▓▓▓▓▓▓██                  
+            ░░▓▓▓▓▓▓██████████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓              
+            ██▓▓▓▓████████████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██            
+            ██▓▓▓▓██████████████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██          
+            ██▓▓▓▓██████████████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██          
+            ██▓▓▓▓██████████████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██      
+            ██▓▓▓▓████████████████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▓▓  
+            ████████████████████████████████████████████████████████▓▓
+
+""");
     mannen = Console.ReadLine();
 
-    if (mannen.Equals("spring", StringComparison.OrdinalIgnoreCase)) {
+    if (mannen.ToLower() == "spring") {
         Console.Clear();
-        Console.WriteLine("Du springer iväg från mannen så snabbt som möjligt men du snubblar och landar med huvudet först mot en sten. Du dör. Game over! 3/5");
+        Console.WriteLine("Du springer iväg från mannen så snabbt som möjligt men du snubblar och landar med huvudet först mot en sten. Du dör. Game over! 3/5 Ending");
+        Console.WriteLine("""
+                       ▓▓████████                  
+                    ██    ░░░░▓▓██                
+                  ██      ▒▒░░░░▓▓████            
+                  ██      ▒▒▒▒▒▒    ▓▓██          
+            ██████      ░░░░▒▒▒▒▒▒  ▓▓▓▓██        
+        ▓▓▓▓          ▒▒▒▒░░▒▒▒▒▒▒▒▒▓▓▓▓██        
+      ▓▓▓▓    ▒▒▒▒    ░░░░░░▒▒▒▒▒▒▒▒▓▓▓▓▓▓██      
+      ▓▓    ░░▒▒      ▒▒  ░░▒▒▒▒▒▒▒▒▒▒▓▓▓▓██      
+    ▓▓    ░░▒▒▒▒  ░░░░▒▒░░░░▒▒▒▒▒▒▒▒▒▒▓▓▓▓██      
+    ▓▓    ░░▓▓    ▒▒▒▒░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▓▓██      
+    ▓▓    ▒▒▒▒▒▒  ░░░░▒▒▒▒░░░░▒▒░░▒▒▒▒▒▒▓▓▓▓██    
+    ▓▓  ░░░░▒▒▒▒  ░░▒▒▒▒▒▒░░░░░░░░░░▒▒▒▒▓▓▓▓██    
+  ▓▓░░▒▒░░░░▒▒▒▒░░▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒░░▒▒░░▓▓▓▓██    
+  ▓▓▒▒  ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▓▓▒▒▒▒▓▓██    
+▓▓▓▓░░▒▒▒▒▒▒▓▓▒▒░░░░▒▒░░▒▒░░▒▒▒▒▒▒▒▒▒▒▓▓▒▒▓▓▓▓██  
+▓▓░░  ▒▒▒▒▒▒▓▓░░░░░░▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓██  
+██░░▒▒▒▒▒▒▓▓▓▓░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▓▓██  
+██▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓██
+██▓▓▒▒▒▒▓▓▓▓▒▒▒▒░░░░▒▒▒▒▒▒▒▒▒▒░░▒▒░░▒▒▒▒▒▒▓▓▓▓▓▓██
+██▒▒▓▓▒▒▒▒▓▓▒▒░░░░▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒░░░░▓▓▒▒▓▓▓▓▓▓██
+██▓▓▓▓▓▓▒▒▓▓▒▒▒▒▒▒▓▓▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒░░▓▓▓▓▓▓▓▓██  
+  ██████████▓▓▒▒▒▒▒▒▒▒▓▓▒▒▒▒░░░░▒▒▓▓▓▓▓▓▓▓▓▓██    
+          ██▓▓▓▓▓▓▒▒▒▒▒▒▒▒░░░░░░▓▓▓▓▓▓▓▓████      
+            ████████████████████████████          
+
+""");
         Console.ReadLine();
     }
 
-    else if (mannen.Equals("stanna", StringComparison.OrdinalIgnoreCase)) {
+    else if (mannen.ToLower() == "stanna") {
         Console.Clear();
-        Console.WriteLine("Din nyfikenhet tar över och du stannar och väntar på mannen. När han är framför dig skappar han en annan dörr för dig att gå in i och säger: 'Du är långt ifrån ditt hem, du borde inte vara här. Gå in i dörren och den kommer att ta dig hem'. ");
+        Console.WriteLine("Din nyfikenhet tar över och du stannar och väntar på mannen. När han är framför dig står han stilla där en stund. Nästa gång du blinkar är han borta och du är i ditt hem. Du överlevde! You Won! 4/5 Ending");
+        Console.WriteLine("""
+                                         .''.
+       .''.             *''*    :_\/_:     . 
+      :_\/_:   .    .:.*_\/_*   : /\ :  .'.:.'.
+  .''.: /\ : _\(/_  ':'* /\ *  : '..'.  -=:o:=-
+ :_\/_:'.:::. /)\*''*  .|.* '.\'/.'_\(/_'.':'.'
+ : /\ : :::::  '*_\/_* | |  -= o =- /)\    '  *
+  '..'  ':::'   * /\ * |'|  .'/.\'.  '._____
+      *        __*..* |  |     :      |.   |' .---"|
+       _*   .-'   '-. |  |     .--'|  ||   | _|    |
+    .-'|  _.|  |    ||   '-__  |   |  |    ||      |
+    |' | |.    |    ||       | |   |  |    ||      |
+ ___|  '-'     '    ""       '-'   '-.'    '`      |____
+jgs~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+""");
         Console.ReadLine();
     }
 
     else {
         Console.Clear();
-        Console.WriteLine("Du stannar upp i rädsla och får en hjärtattack och dör. Game over! 5/5");
+        Console.WriteLine("Du stannar upp i rädsla och får en hjärtattack och dör. Game over! 5/5 Ending");
+        Console.WriteLine("""
+                 |  \ \ | |/ /
+          |  |\ `' ' /
+          |  ;'      \      / , 
+          | ;    _,   |    / / ,  
+          | |   (  `-.;_,-' '-' ,
+          | `,   `-._       _,-'_
+          |,-`.    `.)    ,<_,-'_, 
+         ,'    `.   /   ,'  `;-' _,  
+        ;        `./   /`,    \-'
+        |         /   |  ;\   |\
+        |        ;_,._|_,  `, ' \
+        |        \    \ `       `,
+        `      __ `    \         ;,
+         \   ,'  `      \,       ;;
+          \_(            ;,      ;;
+          |  \           `;,     ;;
+          |  |`.          `;;,   ;'
+          |  |  `-.        ;;;;,;'
+          |  |    |`-.._  ,;;;;;'
+          |  |    |   | ``';;;'  
+""");
         Console.ReadLine(); 
     }
 
 }
 else {
     Console.Clear();
-    Console.WriteLine("Du gör ingenting och ett flygplan krashar och träffar dig, du dör direkt. Game over! 2/5");
+    Console.WriteLine("Du gör ingenting och ett flygplan krashar och träffar dig, du dör direkt. Game over! 2/5 Ending");
+    Console.WriteLine("""
+            ______
+            _\ _~-\___
+    =  = ==(____AA____D
+                \_____\___________________,-~~~~~~~`-.._
+                /     o O o o o o O O o o o o o o O o  |\_
+                `~-.__        ___..----..                  )
+                      `---~~\___________/------------`````
+                      =  ===(_________D
+""");
     Console.ReadLine();
 }
 
